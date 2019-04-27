@@ -1,0 +1,15 @@
+#+TITLE: ideas
+
+* Your Life is Currency
+
+** organ harvesting
+- running an organ harvesting company
+  - rise through the ranks, from someone grabbing bodies to harvest, to running
+    the company
+  - control territory
+*** win/lose conditions
+- push out the competition (territory)
+- get pushed out to lose
+
+** spend health to gain powerups
+- platformer, spend health to access new areas and gain powerups
