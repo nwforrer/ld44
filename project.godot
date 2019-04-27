@@ -19,6 +19,11 @@ config/name="ld44"
 run/main_scene="res://maps/MainMap.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

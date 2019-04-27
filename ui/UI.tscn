@@ -7,13 +7,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="RetrieveBodiesButton" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 12.0
-margin_bottom = 20.0
-text = "Retrieve Bodies"
-
 [node name="Harvest Organs" type="Button" parent="."]
 margin_left = 10.0
 margin_top = 40.0
@@ -21,4 +14,3 @@ margin_right = 122.0
 margin_bottom = 62.0
 text = "Harvest Organs"
 
-[connection signal="pressed" from="RetrieveBodiesButton" to="." method="_on_RetrieveBodiesButton_pressed"]

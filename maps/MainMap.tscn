@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://maps/MainMap.gd" type="Script" id=1]
 [ext_resource path="res://maps/grass_bg.png" type="Texture" id=2]
-[ext_resource path="res://bodies/Person.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactions/Area.tscn" type="PackedScene" id=3]
 [ext_resource path="res://bodies/person.png" type="Texture" id=4]
-[ext_resource path="res://ui/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://bodies/Harvester.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/UI.tscn" type="PackedScene" id=6]
 
 [node name="MainMap" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,22 +14,26 @@ script = ExtResource( 1 )
 position = Vector2( 511, 304 )
 texture = ExtResource( 2 )
 
-[node name="Person" parent="." instance=ExtResource( 3 )]
-position = Vector2( 103.388, 196.438 )
+[node name="Areas" type="Node" parent="."]
 
-[node name="Person2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 104.681, 314.042 )
+[node name="Area" parent="Areas" instance=ExtResource( 3 )]
+position = Vector2( 710.795, 492.387 )
 
-[node name="Person3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 105.973, 434.231 )
+[node name="Area2" parent="Areas" instance=ExtResource( 3 )]
+position = Vector2( 714.672, 116.312 )
 
 [node name="victim" type="Sprite" parent="."]
 position = Vector2( 899.129, 200.266 )
 texture = ExtResource( 4 )
 
-[node name="UI" parent="." instance=ExtResource( 5 )]
+[node name="Harvester" parent="." instance=ExtResource( 5 )]
+position = Vector2( 76.249, 125.358 )
 
-[node name="Destination" type="Position2D" parent="."]
-position = Vector2( 899.479, 407.092 )
+[node name="Harvester2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 74.9566, 288.195 )
 
-[connection signal="retrieve_bodies" from="UI" to="." method="_on_UI_retrieve_bodies"]
+[node name="Harvester3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 74.9566, 511.773 )
+
+[node name="UI" parent="." instance=ExtResource( 6 )]
+

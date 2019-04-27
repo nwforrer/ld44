@@ -1,17 +1,8 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for area in $Areas.get_children():
+		area.connect("area_clicked", self, "_on_Area_clicked", [area.global_position])
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_UI_retrieve_bodies():
-	get_tree().call_group("Harvester", "harvest", $Destination.global_position)
+func _on_Area_clicked(position):
+	get_tree().call_group("Harvester", "harvest", position)

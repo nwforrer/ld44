@@ -13,9 +13,8 @@ func _process(delta):
 func harvest(destination):
 	if harvesting:
 		return
-	
+
 	harvesting = true
 	harvesting_destination = destination
-	
+
 	print(name, " harvesting at ", destination)
-	
