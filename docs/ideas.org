@@ -4,9 +4,8 @@
 
 ** organ harvesting
 - running an organ harvesting company
-  - rise through the ranks, from someone grabbing bodies to harvest, to running
-    the company
   - control territory
+  - send employees to find bodies
 *** win/lose conditions
 - push out the competition (territory)
 - get pushed out to lose
