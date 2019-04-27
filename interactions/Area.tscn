@@ -1,20 +1,67 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://interactions/Area.gd" type="Script" id=1]
 [ext_resource path="res://interactions/area.png" type="Texture" id=2]
+[ext_resource path="res://bodies/person.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 101.139
 
-[node name="Area" type="Area2D"]
-modulate = Color( 1, 1, 1, 0.0823529 )
+[node name="Area" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
 shape = SubResource( 1 )
 
-[connection signal="input_event" from="." to="." method="_on_Area_input_event"]
+[node name="AreaSprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.258824 )
+texture = ExtResource( 2 )
+
+[node name="Bodies" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite" parent="Bodies"]
+position = Vector2( 38.9059, -38.9059 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body2" type="Sprite" parent="Bodies"]
+position = Vector2( -27.5584, -40.527 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body3" type="Sprite" parent="Bodies"]
+position = Vector2( -36.7445, 21.0741 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body4" type="Sprite" parent="Bodies"]
+position = Vector2( 0.540375, 40.527 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body5" type="Sprite" parent="Bodies"]
+position = Vector2( 49.7131, 32.4216 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body6" type="Sprite" parent="Bodies"]
+position = Vector2( -58.3589, -14.5897 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body7" type="Sprite" parent="Bodies"]
+position = Vector2( 75.11, -1.62108 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="Body8" type="Sprite" parent="Bodies"]
+position = Vector2( 14.0493, -18.9126 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+[connection signal="input_event" from="Area2D" to="." method="_on_Area_input_event"]

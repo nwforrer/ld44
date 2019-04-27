@@ -2,7 +2,13 @@ extends Node2D
 
 func _ready():
 	for area in $Areas.get_children():
-		area.connect("area_clicked", self, "_on_Area_clicked", [area.global_position])
+		area.connect("area_clicked", self, "_on_Area_clicked", [area])
+	for harvester in $Harvesters.get_children():
+		harvester.connect("harvest_complete", self, "_on_Harvest_complete")
 
-func _on_Area_clicked(position):
-	get_tree().call_group("Harvester", "harvest", position)
+func _on_Area_clicked(target:HarvestArea):
+	get_tree().call_group("Harvester", "move_to_target", target)
+
+func _on_Harvest_complete(target:HarvestArea):
+	if target.harvest_body():
+		$UI.harvest_body()

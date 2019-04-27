@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "HarvestArea",
+"language": "GDScript",
+"path": "res://interactions/Area.gd"
+} ]
 _global_script_class_icons={
-
+"HarvestArea": ""
 }
 
 [application]
@@ -23,6 +28,10 @@ config/icon="res://icon.png"
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="harvester"
 
 [rendering]
 
