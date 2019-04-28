@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ai/EnemyHarvesters.gd" type="Script" id=1]
+[ext_resource path="res://bodies/EnemyHarvester.tscn" type="PackedScene" id=2]
+
+[node name="EnemyHarvesters" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Harvesters" type="Node" parent="."]
+
+[node name="EnemyHarvester" parent="Harvesters" instance=ExtResource( 2 )]
+position = Vector2( 825.04, 401.47 )
+
+[node name="EnemyHarvester2" parent="Harvesters" instance=ExtResource( 2 )]
+position = Vector2( 810.307, 60.1591 )
+
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true

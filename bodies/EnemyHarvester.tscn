@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bodies/Harvester.tscn" type="PackedScene" id=1]
+
+[node name="EnemyHarvester" groups=[
+"EnemyHarvester",
+] instance=ExtResource( 1 )]
