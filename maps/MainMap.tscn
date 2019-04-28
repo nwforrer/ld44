@@ -37,4 +37,9 @@ position = Vector2( 103.13, 81.0307 )
 
 [node name="EnemyHarvesters" parent="." instance=ExtResource( 6 )]
 areas_path = NodePath("../Areas")
+
+[node name="CoffinSpawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 [connection signal="enemy_harvest" from="EnemyHarvesters" to="." method="_on_EnemyHarvesters_enemy_harvest"]
+[connection signal="timeout" from="CoffinSpawnTimer" to="." method="_on_CoffinSpawnTimer_timeout"]

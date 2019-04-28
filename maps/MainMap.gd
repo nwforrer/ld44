@@ -17,3 +17,16 @@ func _on_Harvest_complete(target:HarvestArea):
 
 func _on_EnemyHarvesters_enemy_harvest():
 	$UI.enemy_harvest_body()
+
+
+func _on_CoffinSpawnTimer_timeout():
+	var area_count = $Areas.get_children().size()
+	var try_count = 5
+	var try = 0
+	for try in range(try_count):
+		var area_index = randi()%area_count
+		print("area_index ", area_index)
+		var rand_area:Area = $Areas.get_child(area_index)
+		if rand_area.add_body():
+			break
+	

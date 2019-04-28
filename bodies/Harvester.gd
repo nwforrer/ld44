@@ -35,8 +35,21 @@ func move_to_target(destination):
 	_change_state(STATES.MOVING_TO_HARVEST)
 
 func _change_state(new_state):
-	if new_state == STATES.HARVESTING:
-		$HarvestTimer.start()
+	match new_state:
+		STATES.NONE:
+			if $AnimationPlayer.has_animation("idle"):
+				$AnimationPlayer.play("idle")
+				$person.flip_h = false
+		STATES.HARVESTING:
+			$HarvestTimer.start()
+		STATES.MOVING_TO_HARVEST:
+			if $AnimationPlayer.has_animation("walk"):
+				$AnimationPlayer.play("walk")
+				$person.flip_h = false
+		STATES.MOVING_HOME:
+			if $AnimationPlayer.has_animation("walk"):
+				$AnimationPlayer.play("walk")
+				$person.flip_h = true
 	current_state = new_state
 
 func _move_towards(destination):

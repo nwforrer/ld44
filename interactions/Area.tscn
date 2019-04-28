@@ -2,16 +2,13 @@
 
 [ext_resource path="res://interactions/Area.gd" type="Script" id=1]
 [ext_resource path="res://interactions/area.png" type="Texture" id=2]
-[ext_resource path="res://bodies/person.png" type="Texture" id=3]
+[ext_resource path="res://bodies/Coffin.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 101.139
 
 [node name="Area" type="Node2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -25,43 +22,42 @@ texture = ExtResource( 2 )
 
 [node name="Bodies" type="Node2D" parent="."]
 
-[node name="Body" type="Sprite" parent="Bodies"]
-position = Vector2( 38.9059, -38.9059 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 50.5369, -36.0531 )
 
-[node name="Body2" type="Sprite" parent="Bodies"]
-position = Vector2( -27.5584, -40.527 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin2" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -59.6776, 23.931 )
 
-[node name="Body3" type="Sprite" parent="Bodies"]
-position = Vector2( -36.7445, 21.0741 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin3" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -36.2692, -51.171 )
 
-[node name="Body4" type="Sprite" parent="Bodies"]
-position = Vector2( 0.540375, 40.527 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin4" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 9.08458, -26.7873 )
 
-[node name="Body5" type="Sprite" parent="Bodies"]
-position = Vector2( 49.7131, 32.4216 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin5" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -15.2992, 33.1968 )
 
-[node name="Body6" type="Sprite" parent="Bodies"]
-position = Vector2( -58.3589, -14.5897 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin6" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 18.3504, -69.215 )
 
-[node name="Body7" type="Sprite" parent="Bodies"]
-position = Vector2( 75.11, -1.62108 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin7" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 39.3204, 15.1528 )
 
-[node name="Body8" type="Sprite" parent="Bodies"]
-position = Vector2( 14.0493, -18.9126 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+[node name="Coffin8" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 76.3837, 8.81303 )
+
+[node name="Coffin9" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 12.986, 52.7038 )
+
+[node name="Coffin10" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -46.0227, -9.71863 )
+
+[node name="Coffin11" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -36.7569, 57.0928 )
+
+[node name="Coffin13" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( 47.6109, 49.2901 )
+
+[node name="Coffin12" parent="Bodies" instance=ExtResource( 3 )]
+position = Vector2( -19.6883, -4.84188 )
 [connection signal="input_event" from="Area2D" to="." method="_on_Area_input_event"]

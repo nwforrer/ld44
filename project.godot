@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Sprite",
+"class": "Coffin",
+"language": "GDScript",
+"path": "res://bodies/Coffin.gd"
+}, {
 "base": "Node2D",
 "class": "HarvestArea",
 "language": "GDScript",
 "path": "res://interactions/Area.gd"
 } ]
 _global_script_class_icons={
+"Coffin": "",
 "HarvestArea": ""
 }
 

@@ -9,7 +9,15 @@ func _on_Area_input_event(viewport, event, shape_idx):
 		emit_signal("area_clicked")
 
 func harvest_body():
-	if $Bodies.get_children().size() > 0:
-		$Bodies.get_child(0).queue_free()
-		return true
+	for coffin in $Bodies.get_children():
+		if coffin.is_available:
+			coffin.claim()
+			return true
+	return false
+
+func add_body():
+	for coffin in $Bodies.get_children():
+		if not coffin.is_available:
+			coffin.restore()
+			return true
 	return false
